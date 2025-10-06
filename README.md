@@ -1,4 +1,4 @@
-# 📦 Proyecto de Clasificación Automatizada de Cajas
+#  Proyecto de Clasificación Automatizada de Cajas
 
 ## 1. Introducción
 Este proyecto tiene como objetivo el diseño e implementación de un sistema automatizado de clasificación de cajas en una cinta transportadora, empleando **PLC y lenguaje Ladder** en CODESYS, con dos aproximaciones:
@@ -41,8 +41,68 @@ La solución fue validada a nivel de simulación en CODESYS y posteriormente se 
 - Diagrama de circuito eléctrico (conexión de sensores infrarrojos y pistones a salidas digitales del PLC/Arduino).  
 
 📷 *[Espacio para diagrama Ladder]*  
-📷 *[Espacio para diagrama de conexiones eléctricas]*  
 📷 *[Espacio para el HMI en CODESYS]*  
+
+# 🏗️ Implementación en OpenPLC
+
+##  Definición de variables
+En OpenPLC se definieron las siguientes entradas, salidas y marcas internas:
+
+| Nombre        | Tipo  | Atributo  | Dirección | Descripción |
+|---------------|-------|-----------|-----------|-------------|
+| SensorCaja0   | BOOL  | Entrada   | %IX0.0    | Sensor inferior de la caja |
+| SensorCaja1   | BOOL  | Entrada   | %IX0.1    | Sensor medio de la caja |
+| SensorCaja2   | BOOL  | Entrada   | %IX0.2    | Sensor superior de la caja |
+| Start         | BOOL  | Entrada   | %IX0.3    | Botón de arranque |
+| Stop          | BOOL  | Entrada   | %IX0.4    | Botón de parada |
+| Emergency     | BOOL  | Entrada   | %IX0.5    | Botón de emergencia |
+| MotorOut      | BOOL  | Salida    | %QX0.0    | Motor de la cinta transportadora |
+| PistonOut1    | BOOL  | Salida    | %QX0.1    | Pistón de clasificación de cajas grandes |
+| PistonOut2    | BOOL  | Salida    | %QX0.2    | Pistón de clasificación de cajas medianas |
+| LedStart      | BOOL  | Salida    | %QX0.3    | Luz verde: proceso en marcha |
+| LedStop       | BOOL  | Salida    | %QX0.4    | Luz amarilla: proceso detenido |
+| LedEmergency  | BOOL  | Salida    | %QX0.5    | Luz roja: emergencia/falla |
+| ProcessStart  | BOOL  | Interna   | %QX0.6    | Marca de enclavamiento de proceso |
+| SR0           | SR    | Interna   | -         | Set/Reset de enclavamiento |
+
+---
+<img width="1280" height="1131" alt="image" src="https://github.com/user-attachments/assets/b2d100d8-98ca-451d-8b09-a21941c25f8d" />
+
+
+##  Lógica Ladder en OpenPLC
+
+La lógica desarrollada corresponde a un **sistema de clasificación de cajas**:
+
+1. **Arranque y enclavamiento**  
+   - `Start` activa `ProcessStart`, que mantiene el sistema en marcha hasta que se presione `Stop` o `Emergency`.
+
+2. **Funcionamiento normal**  
+   - Si `ProcessStart` está activo → se encienden el **motor de la cinta** (`MotorOut`) y la **luz verde** (`LedStart`).
+
+3. **Clasificación de cajas según sensores**  
+   - **Caja grande** → si se activan los tres sensores (`SensorCaja0`, `SensorCaja1`, `SensorCaja2`), se activa `PistonOut1`.  
+   - **Caja mediana** → si se activan los sensores inferior y medio (`SensorCaja1` y `SensorCaja2`), se activa `PistonOut2`.  
+   - **Caja pequeña** → solo el sensor inferior (`SensorCaja0`) está activo → la caja sigue sin desvío.  
+
+4. **Condiciones de error**  
+   - Combinaciones no válidas (ejemplo: sensores superior e inferior activos sin el medio, o solo el sensor medio activo) → activan `LedEmergency`.
+
+5. **Parada del sistema**  
+   - Al presionar `Stop` o `Emergency`, se resetea `ProcessStart`, se apaga el motor y se enciende la **luz amarilla** (`LedStop`).
+
+---
+
+##  Funcionamiento esperado
+- El operador pulsa **Start** → motor en marcha + luz verde encendida.  
+- Caja detectada por sensores → dependiendo del patrón de activación se clasificará como **grande** o **mediana** (activando pistones).  
+- Caja pequeña → sigue derecho sin desvío.  
+- Fallas de sensores → se enciende la luz roja (LedEmergency).  
+- Botón **Stop** → parada normal con luz amarilla.  
+- Botón **Emergency** → parada inmediata con luz roja.  
+
+---
+
+
 
 ### 2.4 Validación
 - **Simulación en CODESYS:** verificación del comportamiento esperado en los dos modos (tiempo y sensores).  
