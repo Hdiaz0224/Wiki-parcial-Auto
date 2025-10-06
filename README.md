@@ -122,6 +122,21 @@ En la parte media se ubicó un tornillo adicional que cumple la función de ajus
 
 Para mantener la estructura estable, especialmente por el peso del servomotor que está anclado en uno de los extremos, se añadieron patas de cartón que elevan y equilibran la banda transportadora, permitiendo un funcionamiento más estable y continuo.
 
+IMPORTANTE
+
+Se escogió el tamaño original basados en lo que nos permitiera trabajar con unos ejes que permitieran el movimiento de la banda transportadora. Como se escogieron los plásticos del centro de las bolsas para perros como nuestros ejes, las dimensiones del proyecto se acomodan a dichas medidas. Pensando en lo anterior, se establece que el proyecto cuenta con un radio de 7:1 de lo que se esperaría tener en un modelo real que trabaje con cajas de tamaño promedio con productos reales.
+
+### Diseño de planos del prototipo
+
+![Imagen de WhatsApp 2025-10-06 a las 06 41 34_f22eef25](https://github.com/user-attachments/assets/08bfdaa7-ad03-4dff-86bc-2807ee4cdf0f)
+
+![Imagen de WhatsApp 2025-10-06 a las 06 41 34_324cded4](https://github.com/user-attachments/assets/8c5c61b4-801a-40da-82db-d1152af3d473)
+
+![Imagen de WhatsApp 2025-10-06 a las 06 41 34_f473545c](https://github.com/user-attachments/assets/246c8552-b71e-45e6-9a38-37988096ad80)
+
+### Protitipo final junto a cajas
+
+![Imagen de WhatsApp 2025-10-06 a las 06 41 33_9daf54dd](https://github.com/user-attachments/assets/b590ff0f-528e-4414-a29f-011eaec58845)
 
 
 ---
@@ -154,7 +169,9 @@ Para mantener la estructura estable, especialmente por el peso del servomotor qu
 - **Diagrama eléctrico:** conexiones PLC ↔ sensores ↔ actuadores ↔ LEDs.  
 
 📷 *[Espacio para diagrama de actividades]*  
-📷 *[Espacio para diagrama eléctrico]*  
+<img width="868" height="883" alt="image" src="https://github.com/user-attachments/assets/57d14c09-bc07-4611-a255-bf81bdb82208" />
+
+* Para desarrollar el diagrama mostrado anteriormente se utilizó ClaudeAI 
 
 ---
 
