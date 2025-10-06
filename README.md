@@ -6,7 +6,7 @@ Este proyecto tiene como objetivo el diseño e implementación de un sistema aut
 1. **Control por tiempo (TON):** clasificación basada en secuencia temporizada.  
 2. **Control por sensores:** clasificación según la activación de sensores infrarrojos que determinan el tamaño de la caja.  
 
-La solución fue validada a nivel de simulación en CODESYS y posteriormente se contempla su implementación en hardware real mediante OpenPLC y Arduino.
+La solución fue validada a nivel de simulación en CODESYS y posteriormente su implementación en hardware real mediante OpenPLC y Arduino.
 
 ---
 
@@ -38,7 +38,7 @@ La solución fue validada a nivel de simulación en CODESYS y posteriormente se 
 ### 2.3 Implementación
 - Programación Ladder en CODESYS (se incluyen capturas de los rungs).  
 - Integración de HMI en CODESYS.  
-- Diagrama de circuito eléctrico (conexión de sensores infrarrojos y pistones a salidas digitales del PLC/Arduino).  
+- **Diagrama de circuito eléctrico (conexión de sensores infrarrojos y pistones a salidas digitales del PLC/Arduino).**  
 
 <img width="747" height="542" alt="image" src="https://github.com/user-attachments/assets/d0489935-8fec-4c2b-b5ab-513ce118a563" />
 
