@@ -40,8 +40,11 @@ La solución fue validada a nivel de simulación en CODESYS y posteriormente se 
 - Integración de HMI en CODESYS.  
 - Diagrama de circuito eléctrico (conexión de sensores infrarrojos y pistones a salidas digitales del PLC/Arduino).  
 
-📷 *[Espacio para diagrama Ladder]*  
-📷 *[Espacio para el HMI en CODESYS]*  
+<img width="747" height="542" alt="image" src="https://github.com/user-attachments/assets/d0489935-8fec-4c2b-b5ab-513ce118a563" />
+
+
+<img width="969" height="435" alt="image" src="https://github.com/user-attachments/assets/497f792d-d8b0-4cbd-81e8-cee570c67afa" />
+
 
 #  Implementación en OpenPLC
 
@@ -109,7 +112,6 @@ La lógica desarrollada corresponde a un **sistema de clasificación de cajas**:
 - **Prototipado en hardware real (Arduino + LEDs + sensores IR):** pendiente de implementación.  
 - **Video demostrativo:** máximo 10 minutos con explicación y pruebas.  
 
-📷 *[Espacio para fotos del prototipo con Arduino y LEDs]*  
 
 ---
 
