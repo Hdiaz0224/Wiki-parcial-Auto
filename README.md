@@ -86,10 +86,11 @@ La solución fue validada a nivel de simulación en CODESYS y posteriormente se 
 ---
 
 ## 5. Roles y Contribuciones
-- **Integrante A:** diseño del Ladder y definición de variables.  
-- **Integrante B:** desarrollo del HMI en CODESYS y documentación.  
-- **Integrante C:** validación con hardware real y elaboración del video.  
-
+- **Hector Diaz y Cristian Rosero** diseño del Ladder y definición de variables.  
+- **Hector Diaz** desarrollo del HMI en CODESYS y documentación.
+- **Cristian Rosero:** validación con OPENPLC.
+- **Cristian Rosero y Juan Pinilla:** validación con hardware real.
+- **Cristian Rosero, Hector Diaz y Juan Pinilla** Creacion Wiki y creacion video
 ---
 
 ## 6. Uso de Inteligencia Artificial
