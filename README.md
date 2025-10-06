@@ -108,9 +108,20 @@ La lógica desarrollada corresponde a un **sistema de clasificación de cajas**:
 
 
 ### 2.4 Validación
-- **Simulación en CODESYS:** verificación del comportamiento esperado en los dos modos (tiempo y sensores).  
-- **Prototipado en hardware real (Arduino + LEDs + sensores IR):** pendiente de implementación.  
-- **Video demostrativo:** máximo 10 minutos con explicación y pruebas.  
+- **Simulación en OPEN PLC:** verificación del comportamiento esperado en los dos modos (tiempo y sensores).  
+
+### 2.5 Prototipado
+
+#### Prototipo físico de la banda transportadora
+
+El proyecto de automatización y control de procesos consiste en una banda transportadora elaborada a partir de materiales reciclados y de bajo costo. La estructura está construida con cartón proveniente de una caja de la tienda D1, adaptada y cortada en forma de caja rectangular para alojar el sistema completo. 
+
+El eje principal, encargado del movimiento, está hecho con un chazo que se conecta directamente al servomotor y está recubierto con plástico proveniente del centro de una bolsa para perros, lo que ayuda a reducir la fricción. El eje secundario, que es independiente, está construido con un tornillo rodeado también por el mismo tipo de plástico para permitir un giro libre. 
+
+En la parte media se ubicó un tornillo adicional que cumple la función de ajustar la tensión de la banda, evitando que se deslice o se afloje durante el funcionamiento. La banda fue confeccionada con un trapo de cocina cosido con hilo, lo cual le da resistencia y cierta flexibilidad. 
+
+Para mantener la estructura estable, especialmente por el peso del servomotor que está anclado en uno de los extremos, se añadieron patas de cartón que elevan y equilibran la banda transportadora, permitiendo un funcionamiento más estable y continuo.
+
 
 
 ---
@@ -166,4 +177,5 @@ Parte del borrador de la documentación fueron elaborados con apoyo de **ChatGPT
 3. Bolton, W. (2015). *Programmable Logic Controllers*. 6th Edition. Newnes.  
 4. Petruzella, F. D. (2016). *Programmable Logic Controllers*. McGraw Hill.  
 5. OpenPLC Project. *Official Documentation*. [https://www.openplcproject.com](https://www.openplcproject.com)  
-6. CODESYS Group. *CODESYS Documentation Portal*. [https://help.codesys.com](https://help.codesys.com)  
+6. CODESYS Group. *CODESYS Documentation Portal*. [https://help.codesys.com](https://help.codesys.com)
+7. https://youtu.be/Aeb6ZOtcsp4?si=HfKpL-IPVeWncNhd
