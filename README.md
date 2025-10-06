@@ -43,7 +43,7 @@ La solución fue validada a nivel de simulación en CODESYS y posteriormente se 
 📷 *[Espacio para diagrama Ladder]*  
 📷 *[Espacio para el HMI en CODESYS]*  
 
-# 🏗️ Implementación en OpenPLC
+#  Implementación en OpenPLC
 
 ##  Definición de variables
 En OpenPLC se definieron las siguientes entradas, salidas y marcas internas:
