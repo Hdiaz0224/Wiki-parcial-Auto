@@ -38,8 +38,6 @@ La solución fue validada a nivel de simulación en CODESYS y posteriormente su 
 ### 2.3 Implementación
 - Programación Ladder en CODESYS (se incluyen capturas de los rungs).  
 - Integración de HMI en CODESYS.  
-- **Diagrama de circuito eléctrico (conexión de sensores infrarrojos y pistones a salidas digitales del PLC/Arduino).**  
-
 <img width="747" height="542" alt="image" src="https://github.com/user-attachments/assets/d0489935-8fec-4c2b-b5ab-513ce118a563" />
 
 
@@ -194,3 +192,6 @@ Parte del borrador de la documentación fueron elaborados con apoyo de **ChatGPT
 5. OpenPLC Project. *Official Documentation*. [https://www.openplcproject.com](https://www.openplcproject.com)  
 6. CODESYS Group. *CODESYS Documentation Portal*. [https://help.codesys.com](https://help.codesys.com)
 7. https://youtu.be/Aeb6ZOtcsp4?si=HfKpL-IPVeWncNhd
+8. https://www.youtube.com/watch?v=UsF5Isjdgw4
+
+
