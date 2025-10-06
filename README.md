@@ -165,10 +165,8 @@ Se escogió el tamaño original basados en lo que nos permitiera trabajar con un
 
 ## 4. Diagramas
 
-- **Diagrama de actividades (secuencial):** flujo del proceso → Start → Motor ON → Lectura sensores → Clasificación → Pistón → Fin o Error.  
 - **Diagrama eléctrico:** conexiones PLC ↔ sensores ↔ actuadores ↔ LEDs.  
 
-📷 *[Espacio para diagrama de actividades]*  
 <img width="868" height="883" alt="image" src="https://github.com/user-attachments/assets/57d14c09-bc07-4611-a255-bf81bdb82208" />
 
 * Para desarrollar el diagrama mostrado anteriormente se utilizó ClaudeAI 
